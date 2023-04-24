@@ -45,6 +45,20 @@ scrapy shell  "./html/1992_World_Junior_Championships_in_Athletics_–_Men's_hig
 
 Note that the quotes are required for the shell to work and escape the single quote within the HTML page. The shell uses a IPython as the shell (Jupyter-like output in the terminal) so be aware that when copying and pasting, you might need to reformat.
 
+We could have the following errors after running the above command, that can be corrected by running the installation commands:
+
+"ImportError: cannot import name 'SSLv3_METHOD' from 'OpenSSL.SSL'"
+```
+pip3 install pyopenssl==22.0.0
+```
+
+"AttributeError: module 'lib' has no attribute 'OpenSSL_add_all_algorithms' "
+```
+pip3 install cryptography==38.0.4
+```
+
+
+
 Confirm that the `response.url` points to the local path:
 
 ```
